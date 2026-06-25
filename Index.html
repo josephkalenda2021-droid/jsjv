@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>L'ÉLÉGANCE | Haute Couture &amp; Lifestyle</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-container": "#8192a7",
+                    "on-tertiary-fixed-variant": "#454748",
+                    "surface-bright": "#f9f9f9",
+                    "primary-fixed": "#d2e4fb",
+                    "on-surface-variant": "#44474c",
+                    "surface-container-highest": "#e2e2e2",
+                    "inverse-on-surface": "#f0f1f1",
+                    "surface-container": "#eeeeee",
+                    "surface-tint": "#4f6073",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed-variant": "#38485a",
+                    "on-tertiary-fixed": "#191c1d",
+                    "surface-variant": "#e2e2e2",
+                    "on-error": "#ffffff",
+                    "surface-container-low": "#f3f3f4",
+                    "surface-container-high": "#e8e8e8",
+                    "secondary-fixed": "#ffe088",
+                    "on-surface": "#1a1c1c",
+                    "on-secondary-fixed": "#241a00",
+                    "secondary": "#735c00",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-container": "#fed65b",
+                    "surface-dim": "#dadada",
+                    "tertiary-container": "#272a2b",
+                    "outline": "#74777d",
+                    "inverse-primary": "#b7c8de",
+                    "primary-fixed-dim": "#b7c8de",
+                    "background": "#f9f9f9",
+                    "tertiary": "#131617",
+                    "tertiary-fixed": "#e1e3e4",
+                    "on-tertiary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-container": "#8f9192",
+                    "secondary-fixed-dim": "#e9c349",
+                    "primary-container": "#1a2b3c",
+                    "surface": "#f9f9f9",
+                    "on-primary-fixed": "#0b1d2d",
+                    "error": "#ba1a1a",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed-dim": "#c5c7c8",
+                    "on-secondary-container": "#745c00",
+                    "primary": "#041627",
+                    "on-secondary-fixed-variant": "#574500",
+                    "on-background": "#1a1c1c",
+                    "on-secondary": "#ffffff",
+                    "outline-variant": "#c4c6cd",
+                    "inverse-surface": "#2f3131"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "unit": "8px",
+                    "gutter": "24px",
+                    "margin-desktop": "64px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Montserrat"],
+                    "headline-md": ["Playfair Display"],
+                    "display-lg-mobile": ["Playfair Display"],
+                    "body-md": ["Montserrat"],
+                    "headline-sm": ["Playfair Display"],
+                    "label-md": ["Montserrat"],
+                    "label-sm": ["Montserrat"],
+                    "display-lg": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "1", "fontWeight": "500"}],
+                    "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .ambient-shadow {
+            box-shadow: 0 32px 64px -12px rgba(4, 22, 39, 0.06);
+        }
+        .nav-underline-effect {
+            position: relative;
+        }
+        .nav-underline-effect::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #735c00;
+            transition: width 0.3s ease;
+        }
+        .nav-underline-effect:hover::after {
+            width: 100%;
+        }
+        .product-card-image {
+            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .product-card:hover .product-card-image {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md dark:bg-surface-container-high/90 border-b border-on-surface/10 dark:border-outline-variant/10 shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-8">
+<a class="text-headline-sm font-headline-sm tracking-widest text-primary dark:text-primary-fixed uppercase" href="#">L'ÉLÉGANCE</a>
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-primary dark:text-primary-fixed border-b-2 border-secondary font-bold pb-1 text-label-md font-label-md uppercase" href="#">Accueil</a>
+<a class="text-on-surface-variant dark:text-on-tertiary-container hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 nav-underline-effect text-label-md font-label-md uppercase" href="#">Boutique</a>
+<a class="text-on-surface-variant dark:text-on-tertiary-container hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 nav-underline-effect text-label-md font-label-md uppercase" href="#">À Propos</a>
+<a class="text-on-surface-variant dark:text-on-tertiary-container hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 nav-underline-effect text-label-md font-label-md uppercase" href="#">Contact</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:opacity-80 transition-all duration-300">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed">search</span>
+</button>
+<button class="p-2 hover:opacity-80 transition-all duration-300 relative">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed">shopping_cart</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-secondary rounded-full"></span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[870px] w-full flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A cinematic, high-fashion editorial portrait of a sophisticated woman wearing a minimalist charcoal wool coat. She stands in a sun-drenched, white minimalist architectural space with long shadows. The lighting is soft and natural, emphasizing the premium texture of the fabric. The overall color palette is a neutral blend of soft whites, deep greys, and warm golden sunlight highlights, conveying ultimate luxury and editorial poise." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDqqvkMe-0PQHhPeCdpqyQUql6L3ozffrNHbJF9RKINcu6n4HOKH2oARxUnVVPoPI2kj78pJf4bzYHchGUBReL64zXn8ZIanO3zM1GLVaEpbmQk4uhSxKvwr_Z_oEjf9LDSDXZq8ftiDYm84fQyaSGy0Q33vffp174Hc6pqsnNrCNaArUNOHgFOfPB4K7eovqvSdpQQAitRTliPK7toT4YGThj10yTHZcZMXAGCNWhX1-Q4_UQJ0RHnk9uM6dr-E3TRc48oud-yb1Pa')"></div>
+<div class="absolute inset-0 bg-primary/10"></div>
+</div>
+<div class="relative z-10 px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="max-w-2xl bg-surface/10 backdrop-blur-sm p-8 md:p-0 md:bg-transparent md:backdrop-blur-none">
+<span class="text-label-md font-label-md uppercase tracking-[0.2em] text-on-surface-variant mb-6 block">Collection Hiver 2024</span>
+<h1 class="text-display-lg font-display-lg text-primary mb-8 leading-tight">L'art de la simplicité raffinée.</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant mb-10 max-w-lg">Découvrez une sélection exclusive de pièces intemporelles conçues pour ceux qui apprécient l'excellence du détail.</p>
+<button class="bg-primary text-white font-label-md text-label-md px-10 py-5 uppercase tracking-widest hover:bg-primary-container transition-all duration-300 ambient-shadow">
+                        Découvrir la collection
+                    </button>
+</div>
+</div>
+</section>
+<!-- Trust Bar -->
+<section class="bg-surface-container-low py-12 border-b border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="flex items-center gap-4 justify-center md:justify-start">
+<span class="material-symbols-outlined text-secondary scale-125">local_shipping</span>
+<div>
+<h4 class="font-label-md text-label-md uppercase text-primary">Livraison Rapide</h4>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Expédition en 24/48h</p>
+</div>
+</div>
+<div class="flex items-center gap-4 justify-center">
+<span class="material-symbols-outlined text-secondary scale-125">verified_user</span>
+<div>
+<h4 class="font-label-md text-label-md uppercase text-primary">Paiement Sécurisé</h4>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Protocoles SSL avancés</p>
+</div>
+</div>
+<div class="flex items-center gap-4 justify-center md:justify-end">
+<span class="material-symbols-outlined text-secondary scale-125">support_agent</span>
+<div>
+<h4 class="font-label-md text-label-md uppercase text-primary">Service Client 24/7</h4>
+<p class="text-label-sm font-label-sm text-on-surface-variant">À votre écoute en continu</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Categories Section -->
+<section class="py-24 px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col items-center mb-16">
+<h2 class="text-headline-md font-headline-md text-primary mb-4">Parcourir l'Univers</h2>
+<div class="w-12 h-0.5 bg-secondary"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Category 1 -->
+<a class="group relative aspect-[3/4] overflow-hidden bg-surface-container" href="#">
+<div class="w-full h-full bg-cover bg-center product-card-image" data-alt="A clean, minimalist product shot of high-end accessories including a tan leather handbag and gold jewelry arranged on a white marble surface. Soft, directional light creates elegant shadows. The color palette is composed of warm earth tones, gold accents, and pure white, reflecting a sophisticated luxury e-commerce aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCvVY6QghcRxX6GYA3bf2cfWvpRN_gken-mDN9Z7BgRcYFjmAiAJKZr9sUSXjn656ewZX_aJkAZN7V5_igrSo4ijwrzeqIUuZPbzcuZKtSGaMY6QRmliqncJFCjkc00GBwmh4-fiNm5WJCZt58k0bmm_gbwqpEkVerp0VxEaREAFTyIdx_185vt0BkB-xHXh5hRWyG1nFSpheTumwqvVtCjNVRS-EtLDSJXdXX_Em86S5D2wpcPaX4IHZ7NEZi_Tx4lpXG3kXYi2vAB')"></div>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-8 left-8">
+<h3 class="text-headline-sm font-headline-sm text-white mb-2">Accessoires</h3>
+<span class="text-label-md font-label-md uppercase text-white/80 border-b border-white/40 pb-1">Explorer</span>
+</div>
+</a>
+<!-- Category 2 -->
+<a class="group relative aspect-[3/4] overflow-hidden bg-surface-container" href="#">
+<div class="w-full h-full bg-cover bg-center product-card-image" data-alt="A high-fashion lifestyle shot of a model wearing minimalist tailored clothing in a modern, light-filled studio. The focus is on the clean lines and premium texture of the silk and wool garments. The lighting is high-key and airy, with a palette of beige, cream, and soft grey tones, embodying modern luxury." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC6WqZSDdUSq862yLpn7pbGLSZNjhbKtrFopE2inUblT8ryjeebWDrZrJ8Tibi25rKPs4il6ah6B-XLWRdHP2OKwIdf_MTTgXR5IT-tQzSI5VFonYocm2N9rNP14De635kpb5zf8L8WdFlfsmopMXL4uKb4mPjkm9AsYFgHrypvsnsjEYTYcoC8lqDJ3LKkJWvFWrw_TrA8hHzipNf0UAjxPrihrgFeSPXAAmSRBs77QSWxWNcsexmZmv1_aQRP1irmCs5_q-EnE5Ed')"></div>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-8 left-8">
+<h3 class="text-headline-sm font-headline-sm text-white mb-2">Vêtements</h3>
+<span class="text-label-md font-label-md uppercase text-white/80 border-b border-white/40 pb-1">Explorer</span>
+</div>
+</a>
+<!-- Category 3 -->
+<a class="group relative aspect-[3/4] overflow-hidden bg-surface-container" href="#">
+<div class="w-full h-full bg-cover bg-center product-card-image" data-alt="An artistic flat-lay of new fashion arrivals featuring minimalist footwear and contemporary textiles in a bright, white studio. The composition is clean and organized, with plenty of white space. The lighting is crisp and modern, emphasizing the premium quality of the materials in a palette of slate blue and neutral whites." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBupB_sp91rdfSMI1hNHjUr4sW8kC9i4IRFClUc0VNKZKwCeQ5EzVj0XuAomeF6lpsoDbzxPZUh4KFde-8fovCtuY37xzyLUmNfU3IOIH4-3ld-Sdp-X9DYFrpSya6a1lq0vywqHXMA97fjd3YtiYu352gCJ0iBvcX659Hm3O4MFgOz9QA6-R9u4NSTglI0tEDVSfSJBVR4LAb7TLQmWxnjb9rvYN0-IG__Se1m_yo8cTfxN6JS2T1Bm_kXX6t39j3oCFTjc9ZyzgVV')"></div>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-8 left-8">
+<h3 class="text-headline-sm font-headline-sm text-white mb-2">Nouveautés</h3>
+<span class="text-label-md font-label-md uppercase text-white/80 border-b border-white/40 pb-1">Explorer</span>
+</div>
+</a>
+</div>
+</section>
+<!-- Featured Products -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex justify-between items-end mb-16">
+<div>
+<span class="text-label-sm font-label-sm uppercase tracking-widest text-secondary mb-2 block">Sélection Exclusive</span>
+<h2 class="text-headline-md font-headline-md text-primary">Les Best-Sellers</h2>
+</div>
+<a class="text-label-md font-label-md uppercase text-on-surface-variant hover:text-primary transition-colors border-b border-outline-variant pb-1" href="#">Voir tout</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Product 1 -->
+<div class="product-card group cursor-pointer">
+<div class="relative aspect-[4/5] overflow-hidden bg-white mb-6">
+<div class="w-full h-full bg-cover bg-center product-card-image" data-alt="A studio product shot of a premium black silk dress draped on a minimalist white mannequin. The lighting is soft and editorial, highlighting the subtle sheen and flow of the high-quality silk. The background is a clean, neutral grey, maintaining focus on the garment's silhouette and luxury texture." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDTP0ew50djl8xqALtKyB983DStenesuHd_sUXzuKqHHSGP2CkHexBu4AkpCqu34HOVrRzIR9sBrIQKU91KI3k7zk_drk8TR-IxMwTpqDX_8IPQulAc6K__cWM6cHaLKzrE45hdvJpQqUi6W7twCpHECEj6MrXRiOCKrTesfA3Tm74ToYq-uswAQCCM-NcmVyjxCWOczuQM-VXHNvtApBc7K6StvBtAgettMQ4NoSqsBekjSwzABCkE4iN6D4qj1MaqqrZvccHyHGM9')"></div>
+<div class="absolute bottom-0 left-0 w-full p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-surface/80 backdrop-blur-md">
+<button class="w-full bg-primary text-white py-3 font-label-sm text-label-sm uppercase tracking-widest hover:bg-primary-container transition-colors">
+                                    Ajouter au panier
+                                </button>
+</div>
+<span class="absolute top-4 right-4 bg-secondary text-primary px-3 py-1 font-label-sm text-label-sm uppercase tracking-wider">New</span>
+</div>
+<div class="text-center md:text-left px-2">
+<h3 class="font-body-md text-body-md text-primary mb-1">Robe en Soie Minuit</h3>
+<p class="text-label-md font-label-md text-on-surface-variant">450,00 €</p>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="product-card group cursor-pointer">
+<div class="relative aspect-[4/5] overflow-hidden bg-white mb-6">
+<div class="w-full h-full bg-cover bg-center product-card-image" data-alt="A close-up studio shot of a high-end tan leather shoulder bag with gold hardware. The bag is positioned against a clean white background with soft, natural light coming from the side to emphasize the fine grain of the leather. The color palette is warm and upscale." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDQpn4H7DpowhNTZKy9NZm5O2rs3UbhgglkLZ5FYykSViVC6k5dPXqO9bKbK02KNKPbqTcsJ_W73YURcl6cpCKNQs_KVxD_ld6Hz2sh00PuUXym1JT9h5Zva1u-re0_pL6a2RCJnvAiN_MnqcPdKkl9v5BRLo1mhbFBnnWngwAtfHzuWywjeS7QIkAoWk2Y4ensGPX-aVJW5JoHBdkEMZyoPnS0adubakJGgDKx-7p2ezxwZq8mffBg1BdkZ0zXG38sIeRBce4vmkCm')"></div>
+<div class="absolute bottom-0 left-0 w-full p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-surface/80 backdrop-blur-md">
+<button class="w-full bg-primary text-white py-3 font-label-sm text-label-sm uppercase tracking-widest hover:bg-primary-container transition-colors">
+                                    Ajouter au panier
+                                </button>
+</div>
+</div>
+<div class="text-center md:text-left px-2">
+<h3 class="font-body-md text-body-md text-primary mb-1">Sac à Main en Cuir</h3>
+<p class="text-label-md font-label-md text-on-surface-variant">890,00 €</p>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="product-card group cursor-pointer">
+<div class="relative aspect-[4/5] overflow-hidden bg-white mb-6">
+<div class="w-full h-full bg-cover bg-center product-card-image" data-alt="A minimalist editorial shot of a unisex cashmere sweater in soft oatmeal beige. The garment is laid out on a clean white surface with organic shadows from a nearby plant creating a natural, serene mood. The palette is muted and sophisticated, focusing on the tactile quality of the knit." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC8QWp6gIxW2hukH3AouPXZAYMc_yG6z6KpuY1mO3rEoZCxD33m1M5xN8gPHkmGypjzHOQE8Bnv5TX-qVKhP0O7uTIC-EouPlGixbA7FRQ59a9pcY2ey71fji0L3yfup9nx6WFYWAdNfpOVrAEOn7ABaHgx0ukleT6Fh2it6SUQY-nJT1MVl-z2ApoRAvEOvyRC0ZOK5pii3R2r7DAvnDLLLN8NTAlImojV6l_EZ1IoYmA7EbwdSt9VO27_kfHFTA5NnG2bnyrhG9ay')"></div>
+<div class="absolute bottom-0 left-0 w-full p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-surface/80 backdrop-blur-md">
+<button class="w-full bg-primary text-white py-3 font-label-sm text-label-sm uppercase tracking-widest hover:bg-primary-container transition-colors">
+                                    Ajouter au panier
+                                </button>
+</div>
+</div>
+<div class="text-center md:text-left px-2">
+<h3 class="font-body-md text-body-md text-primary mb-1">Pull en Cachemire</h3>
+<p class="text-label-md font-label-md text-on-surface-variant">295,00 €</p>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="product-card group cursor-pointer">
+<div class="relative aspect-[4/5] overflow-hidden bg-white mb-6">
+<div class="w-full h-full bg-cover bg-center product-card-image" data-alt="A macro detail shot of a luxury gold watch on a minimalist grey background. The focus is on the precision and craftsmanship of the dial and links. Lighting is dramatic yet soft, creating a premium metallic sheen in a palette of warm gold and cool grey." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDdqFo4IE7s7WiLtWprWk_2AwKA_FHz7GGKkm01Tf2hckmTQV55DiDrN1jAvGp0jhts4umh7038mY20nMCKcJVNuKTAR_pkPOAef0f1fH3Ch4RFTxe_t-SSKpE9GsDFlYfzbgNQLy7wkVhnwJB9NdQhFFbNlv4bWB6F8kX0t3WSRaxWMewJgQUinEgS65YwTiXk7Z9PTHt-afJbFsbLYKr7abI8zikfKMI6T4ry_GEGgqi5HdU-tHAjRVG34durd-AJJp2ZVw1qj1IZ')"></div>
+<div class="absolute bottom-0 left-0 w-full p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-surface/80 backdrop-blur-md">
+<button class="w-full bg-primary text-white py-3 font-label-sm text-label-sm uppercase tracking-widest hover:bg-primary-container transition-colors">
+                                    Ajouter au panier
+                                </button>
+</div>
+<span class="absolute top-4 right-4 bg-error text-white px-3 py-1 font-label-sm text-label-sm uppercase tracking-wider">Limitée</span>
+</div>
+<div class="text-center md:text-left px-2">
+<h3 class="font-body-md text-body-md text-primary mb-1">Montre Horizon Or</h3>
+<p class="text-label-md font-label-md text-on-surface-variant">1 200,00 €</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / Editorial Section -->
+<section class="py-32 px-margin-desktop max-w-container-max mx-auto text-center">
+<div class="max-w-2xl mx-auto">
+<h2 class="text-display-lg font-display-lg text-primary mb-6">Rejoignez le cercle.</h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant mb-12">Inscrivez-vous pour recevoir nos actualités exclusives, invitations aux ventes privées et conseils de style.</p>
+<form class="flex flex-col md:flex-row gap-4 items-stretch justify-center">
+<input class="flex-1 max-w-sm border-0 border-b border-outline-variant bg-transparent py-4 px-2 focus:ring-0 focus:border-primary font-body-md placeholder:text-outline-variant" placeholder="Votre adresse e-mail" type="email"/>
+<button class="bg-primary text-white px-10 py-4 uppercase font-label-md text-label-md tracking-widest hover:bg-primary-container transition-all">S'inscrire</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 bg-surface-container-low dark:bg-tertiary-container text-on-surface dark:text-on-tertiary-fixed">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1">
+<h2 class="text-headline-sm font-headline-sm text-primary dark:text-primary-fixed mb-4 uppercase">L'ÉLÉGANCE</h2>
+<p class="text-label-sm font-label-sm text-on-surface-variant mb-6">L'expression ultime du luxe moderne et intemporel.</p>
+<div class="flex gap-4">
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">face_nod</span>
+</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">photo_camera</span>
+</a>
+</div>
+</div>
+<div>
+<h3 class="font-label-md text-label-md uppercase mb-6 text-primary">Boutique</h3>
+<ul class="space-y-4">
+<li><a class="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Femmes</a></li>
+<li><a class="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Hommes</a></li>
+<li><a class="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Accessoires</a></li>
+<li><a class="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Nouveautés</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-label-md text-label-md uppercase mb-6 text-primary">Service Client</h3>
+<ul class="space-y-4">
+<li><a class="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Retours &amp; Échanges</a></li>
+<li><a class="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Guide des tailles</a></li>
+<li><a class="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Suivi de commande</a></li>
+<li><a class="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-label-md text-label-md uppercase mb-6 text-primary">Mentions Légales</h3>
+<ul class="space-y-4">
+<li><a class="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Conditions Générales</a></li>
+<li><a class="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Politique de Confidentialité</a></li>
+<li><a class="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Cookies</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-16 pt-8 border-t border-outline-variant/10 px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-label-sm font-label-sm text-on-surface-variant">© 2024 L'ÉLÉGANCE. Tous droits réservés.</p>
+<div class="flex gap-6">
+<span class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-widest">Paris</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-widest">Milan</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-widest">New York</span>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for scroll effects
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2');
+                nav.classList.remove('py-4');
+            } else {
+                nav.classList.add('py-4');
+                nav.classList.remove('py-2');
+            }
+        });
+
+        // Simple cart counter animation simulation
+        document.querySelectorAll('button').forEach(btn => {
+            if (btn.innerText.includes('AJOUTER AU PANIER')) {
+                btn.addEventListener('click', () => {
+                    btn.innerText = 'AJOUTÉ';
+                    btn.classList.add('bg-secondary');
+                    setTimeout(() => {
+                        btn.innerText = 'AJOUTER AU PANIER';
+                        btn.classList.remove('bg-secondary');
+                    }, 2000);
+                });
+            }
+        });
+    </script>
+</body></html>
